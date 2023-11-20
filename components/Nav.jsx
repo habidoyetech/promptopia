@@ -21,8 +21,10 @@ const Nav = () => {
 
         setUpProviders()
         
+        
     }, [])
-
+    
+    console.log(providers)
   return (
     <nav className='flex-between w-full mb-16 pt-3'>
         <Link rel="stylesheet" href="/" className='flex gap-2 flex-center' >
@@ -41,8 +43,8 @@ const Nav = () => {
             {
                 session?.user ? (
                 <div className='flex gap-3 md:gap-5'>
-                    <Link href="/create-post" className='black_btn'>
-                        Create Post
+                    <Link href="/create-prompt" className='black_btn'>
+                        Create Prompt
                     </Link>
                     <button type='button' onClick={signOut} className='outline_btn'>Sign Out</button>
                     <Link href="/profile">
